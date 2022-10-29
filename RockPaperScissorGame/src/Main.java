@@ -19,7 +19,7 @@ public class Main {
             System.out.println("How many rounds you want to play?");
             numberOfRounds = input.nextInt();
 
-            while (!(numberOfRounds >= minRound && numberOfRounds <= maxRound)) {
+            while (numberOfRounds < minRound && numberOfRounds > maxRound) {
                 System.out.println(" Invalid number! Please enter number between 1 and 10");
                 numberOfRounds = input.nextInt();
 
@@ -65,7 +65,7 @@ public class Main {
                     System.out.println("The game ended in tie");
                 }
                 System.out.println("Do you want to play again?");
-                System.out.println("please enter 1 if you want to play again or 0 if you are done.");
+                System.out.println("please enter 1 if you want to play again or any number if you are done.");
                 playAgain = input.nextInt();
 
                 break;
