@@ -6,7 +6,7 @@ public class Main {
     private final static int minRound = 1;//minimum number of rounds to be played
     private static Scanner input = new Scanner(System.in);
 
-    public static <restart> void main(String[] args) {
+    public static void main(String[] args) {
         //set accumulator to hold the number of Ties,wins and losses.
         int numberOfTies = 0, numberOfUserWins = 0, numberOfComputerWins = 0;
         //Ask user how many rounds they wnt to play
@@ -19,7 +19,7 @@ public class Main {
             System.out.println("How many rounds you want to play?");
             numberOfRounds = input.nextInt();
 
-            while (numberOfRounds < minRound && numberOfRounds > maxRound) {
+            while (numberOfRounds < minRound || numberOfRounds > maxRound) {
                 System.out.println(" Invalid number! Please enter number between 1 and 10");
                 numberOfRounds = input.nextInt();
 
